@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
-import {LayoutDashboard, PenBox } from "lucide-react";
+import { LayoutDashboard, PenBox } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -25,43 +25,45 @@ export const Header = () => {
           />
         </Link>
         <div className="flex items-center space-x-4">
-        <SignedIn>
-          <Link href={"/dashboard"} className="text-gray-600 hover:text-blue-600 flex items-center gap-2">
-            <Button variant="outline" className="flex items-center gap-2">
-            <LayoutDashboard size = {18} />
-              <span className="hidden md:inline"> Dashboard </span>
-            </Button>
-          </Link>
-          <Link href={"/transaction/create"} className="text-gray-600 hover:text-blue-600 flex items-center gap-2">
-            <Button  className="flex items-center gap-2">
-            <PenBox size = {18} />
-              <span className="hidden md:inline"> Add Transaction </span>
-            </Button>
-          </Link>
-        </SignedIn>
-        <SignedOut>
-          <div className="flex items-center justify-center ">
-            <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="outline" className="mx-5">
-                {" "}
-                Login{" "}
+          <SignedIn>
+            <Link
+              href={"/dashboard"}
+              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+            >
+              <Button variant="outline" className="flex items-center gap-2">
+                <LayoutDashboard size={18} />
+                <span className="hidden md:inline"> Dashboard </span>
               </Button>
-            </SignInButton>
-            <SignUpButton>
-              <Button variant="outline" className="mx-5">
-                {" "}
-                SignUp{" "}
+            </Link>
+            <Link
+              href={"/transaction/create"}
+              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+            >
+              <Button className="flex items-center gap-2">
+                <PenBox size={18} />
+                <span className="hidden md:inline"> Add Transaction </span>
               </Button>
-            </SignUpButton>
-          </div>
-        </SignedOut>
-        <SignedIn>
-          <UserButton appearance={{
-            elements:{
-              avatarBox: "w-20 h-20"
-            },
-          }}/>
-        </SignedIn>
+            </Link>
+          </SignedIn>
+          <SignedOut>
+            <div className="flex justify-center space-x-4">
+              <SignInButton forceRedirectUrl="/dashboard">
+                <Button> Login </Button>
+              </SignInButton>
+              <SignUpButton>
+                <Button variant="outline"> SignUp </Button>
+              </SignUpButton>
+            </div>
+          </SignedOut>
+          <SignedIn>
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-20 h-20",
+                },
+              }}
+            />
+          </SignedIn>
         </div>
       </nav>
     </div>
