@@ -5,7 +5,8 @@ import { TransactionTable } from "../_components/transactionTable";
 import { notFound } from "next/navigation";
 import { AccountChart } from "../_components/accountChart";
 import { Suspense } from "react";
-export default async function AccountPage({ params }) {
+export default async function AccountPage(props) {
+  const params = await props.params;
   const accountData = await getAccountWithTransactions(params.id);
 
   if (!accountData) {
