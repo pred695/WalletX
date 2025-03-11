@@ -127,14 +127,14 @@ export function BudgetProgress({ initialBudget, currentExpenses }) {
             <Progress
               value={percentUsed}
               extraStyles={`${
-                // add to Progress component
                 percentUsed >= 90
-                  ? "bg-red-500"
+                  ? "bg-green-500"
                   : percentUsed >= 75
                     ? "bg-yellow-500"
-                    : "bg-green-500"
+                    : "bg-green-200"
               }`}
             />
+
             <p className="text-xs text-muted-foreground text-right">
               {percentUsed.toFixed(1)}% used
             </p>

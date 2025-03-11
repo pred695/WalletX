@@ -1,21 +1,22 @@
-import { getUserAccounts } from "@/actions/dashboard";
+import { getDashboardData, getUserAccounts } from "@/actions/dashboard";
 import { CreateAccountDrawer } from "@/components/createAccountDrawer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plus } from "lucide-react";
-import React from "react";
+import React, { Suspense } from "react";
 import AccountCard from "./_components/accountCard";
 import { BudgetProgress } from "./_components/budgetProgress";
 import { getCurrentBudget } from "@/actions/budget";
-
+import DashboardOverview from "./_components/transactionOverview";
 const DashboardPage = async () => {
   const accounts = await getUserAccounts();
+  const transactions = await getDashboardData();
   const defaultAccount = accounts?.find((acc) => acc.isDefault);
   let budgetData = null;
   if (defaultAccount) {
     budgetData = await getCurrentBudget(defaultAccount.id);
   }
   return (
-    <div className="px-5">
+    <div className="space-y-8">
       {/* Budget Progress */}
       {defaultAccount && (
         <BudgetProgress
@@ -24,6 +25,12 @@ const DashboardPage = async () => {
         />
       )}
       {/* Overview */}
+      <Suspense fallback={"Loading Overview.."}>
+        <DashboardOverview
+          accounts={accounts}
+          transactions={transactions || []}
+        />
+      </Suspense>
       {/* Accounts Grid */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <CreateAccountDrawer>
