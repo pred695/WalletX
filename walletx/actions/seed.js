@@ -3,9 +3,9 @@
 import { db } from "@/lib/prisma";
 import { subDays } from "date-fns";
 
-const ACCOUNT_ID = "e3c83b52-f236-466e-a3ac-6fa48d1dedad";
-const USER_ID = "41733575-97c7-46fc-b0ae-3d509804fb96";
-
+const ACCOUNT_ID = "account-id";
+const USER_ID = "user-id";
+// Make a GET request to localhost:3000/api/seed to seed the database
 // Categories with their typical amount ranges
 const CATEGORIES = {
   INCOME: [

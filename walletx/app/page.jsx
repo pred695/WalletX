@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="mt-20">
       <HeroSection />
-      <section className="py-20 bg-blue-50">
+      {/* <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {statsData.map((x, idx) => (
@@ -27,7 +27,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
