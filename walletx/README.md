@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WalletX
 
-## Getting Started
+![WalletX Banner](https://your-image-link.com)  
+_A powerful finance management tool with AI-driven insights, secure authentication, and automated budgeting._
 
-First, run the development server:
+## 🚀 Features
+
+### 📊 Advanced Analytics
+
+Gain deep insights into your spending patterns with AI-powered analytics.
+
+### 🧾 Smart Receipt Scanner
+
+Extract data automatically from receipts using advanced AI technology.
+
+### 📅 Budget Planning
+
+Create and manage budgets with intelligent recommendations.
+
+### 🏦 Multi-Account Support
+
+Manage multiple accounts and credit cards in one place.
+
+### 🌍 Multi-Currency Support
+
+Get real-time conversion support for multiple currencies.
+
+### ⚡ Automated Insights
+
+Receive AI-driven financial insights and recommendations.
+
+## 🔒 Security & Authentication
+
+- **Secure Login with Clerk**
+- **OAuth Integration**: Login with **Google & Discord**
+- **Rate Limiting**: Powered by **Arcjet** to prevent abuse
+
+## 🔔 Smart Notifications & Automation
+
+- **Email Alerts** for monthly budgets & insights
+- **Timely Cron Jobs** using **Inngest** for automated tasks
+- **AI Assistance** powered by **Gemini AI** for better financial management
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, TailwindCSS
+- **Backend**: Clerk for authentication, Arcjet for security
+- **AI & Automation**: Gemini AI, Inngest
+- **Notifications**: Email alerts for better tracking
+
+## 📷 Preview
+
+![Feature Preview](https://your-image-link.com)
+
+## 🏁 Getting Started
 
 ```bash
+git clone https://github.com/yourusername/WalletX
+cd WalletX
+npm install --legacy-peer-deps
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Roadmap
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [ ] Add more AI-powered insights
+- [ ] Improve receipt scanning accuracy
+- [ ] Expand multi-currency support
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📜 License
 
-## Learn More
+This project is licensed under the MIT License.
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! Feel free to submit a pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📬 Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Have questions? Reach out on [GitHub Issues](https://github.com/yourusername/WalletX/issues).
